@@ -30,9 +30,9 @@ setwd("/Users/mingyu.liu001/Desktop/CPCT-UMASS/BRD4_results/synergyfinder/")
 
 
 
-data <- read.csv("PC3_proliferation_UNC0642_ORY_0409.csv")
+data <- read.csv("22RV1_GSK_Indo_5Day_proliferation_7-24-23.csv")
 
-data$response <- data$response/data$response[5]*100
+data$response <- data$response/data$response[1]*100
 
 # write.csv(data, file="22RV1_proliferation_ORY_IBET762_0804_4days_normalized.csv")
 
@@ -55,7 +55,7 @@ synergy.score <- CalculateSynergy(data = dose.response.mat,
 
 #synergy.score$response[,4] <- as.numeric(synergy.score$response[,4])
 
-pdf(file="Synergy_PC3_proliferation_UNC0642_ORY_0409.pdf")
+pdf(file="Synergy_22RV1_GSK_Indo_5Day_proliferation_7-24-23.pdf")
 # Dose-response curve
 for (i in c(1, 2)){
   PlotDoseResponseCurve(
